@@ -8,10 +8,10 @@ interface LogoProps {
     height?: number;
 }
 
-export const Logo = ({ className = '', width = 200, height = 200 }: LogoProps) => {
+export const Logo = ({ className = '', width = 80, height = 80 }: LogoProps) => {
     return (
         <Image
-            src="/harumia-logo.png"
+            src="/logo-brown-alt.png"
             alt="Harumia Confeitaria"
             width={width}
             height={height}

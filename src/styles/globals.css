@@ -28,7 +28,7 @@
 }
 
 body {
-  background: var(--color-brand-beige);
+  background: #fff;
   color: var(--foreground);
   font-family: var(--font-sans);
 }

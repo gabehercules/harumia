@@ -18,7 +18,7 @@ const clashDisplay = localFont({
 
 export default function Home() {
   return (
-    <main className={`min-h-screen flex items-center justify-center bg-[var(--color-brand-beige)] px-4 ${clashDisplay.variable}`}>
+    <main className={`min-h-screen flex items-center justify-center px-4 ${clashDisplay.variable}`}>
       <div className="max-w-4xl w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,18 +26,21 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8 mx-auto"
         >
-          <Logo width={200} height={200} className="mx-auto" />
+          <Logo width={100} height={100} className="mx-auto" />
         </motion.div>
 
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-5xl md:text-6xl font-bold mb-6 text-[var(--color-brand-brown)] font-clash tracking-tight"
-          style={{ fontVariationSettings: "'wght' 600" }}
+          className="flex flex-col items-center justify-center bg-linear-to-r from-[var(--color-brand-rose)] to-[var(--color-brand-green)] bg-clip-text "
+          style={{ fontVariationSettings: "'wght' 700" }}
         >
-          Harumia Confeitaria
-        </motion.h1>
+          <motion.h1
+            className="text-5xl md:text-7xl font-extrabold mb-6 text-[var(--color-brand-brown)] font-clash tracking-tight text-transparent">
+            Brownies, cookies e cheesecakes.
+          </motion.h1>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +49,7 @@ export default function Home() {
           className="text-xl md:text-2xl mb-12 text-[var(--color-brand-brown)]/80 max-w-2xl mx-auto font-clash"
           style={{ fontVariationSettings: "'wght' 400" }}
         >
-          Brownies, cookies e cheesecakes.
+          Experimente, peça pelo WhatsApp. Em breve, você poderá fazer seu pedido online.
         </motion.p>
 
         <motion.div
