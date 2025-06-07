@@ -5,20 +5,11 @@ import Link from "next/link";
 import { Logo } from "@/components/elements/logos/Logo";
 import localFont from 'next/font/local';
 
-const clashDisplay = localFont({
-  src: [
-    {
-      path: '../../public/fonts/ClashDisplay-Variable.woff2',
-      weight: '200 700',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-clash',
-});
+
 
 export default function Home() {
   return (
-    <main className={`min-h-screen flex items-center justify-center px-4 ${clashDisplay.variable}`}>
+    <main className="min-h-screen flex items-center justify-center px-4 ">
       <div className="max-w-4xl w-full text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,7 +28,7 @@ export default function Home() {
           style={{ fontVariationSettings: "'wght' 700" }}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-extrabold mb-6 text-[var(--color-brand-brown)] font-clash tracking-tight text-transparent">
+            className="text-5xl md:text-7xl font-extrabold mb-6 font-clash tracking-tight text-transparent">
             Brownies, cookies e cheesecakes.
           </motion.h1>
         </motion.div>
