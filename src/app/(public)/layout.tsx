@@ -1,17 +1,18 @@
+import { Header } from "@/components/layout/header";
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import Script from "next/script";
 import localFont from "next/font/local";
+import Script from "next/script";
+import "../../styles/globals.css";
 
 const clashDisplay = localFont({
   src: [
     {
-      path: '../../public/fonts/ClashDisplay-Variable.woff2',
-      weight: '200 700',
-      style: 'normal',
-    }
+      path: "../../../public/fonts/ClashDisplay-Variable.woff2",
+      weight: "200 700",
+      style: "normal",
+    },
   ],
-  variable: '--font-clash',
+  variable: "--font-clash",
 });
 
 export const metadata: Metadata = {
@@ -37,17 +38,16 @@ export default function RootLayout({
         `}
         </Script>
       </head>
-      <body
-        className={`${clashDisplay.variable} antialiased`}
-      >
+      <body className={`${clashDisplay.variable} antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5NWGB6X4"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+        <Header />
         {children}
       </body>
     </html>
